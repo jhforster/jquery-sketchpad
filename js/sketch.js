@@ -16,14 +16,11 @@ $(document).ready(function(){
     })
 
     $('[name=clear]').click(function(){
-        clear();
-        gridSize = 30;
-        drawGrid();
-        marker();
+        shake();
     })
 
     $('[name=resolution]').click(function(){
-        gridSize = prompt("Please enter a between 6 and 64", "16");
+        gridSize = prompt("Please enter a value below 100 (the larger the number, the longer it takes)", "30");
         clear();
         drawGrid();
         marker();
@@ -60,5 +57,22 @@ function eraser() {
 }
 
 function clear() {
-    $('.canvas').empty()
+    $('.canvas').empty();
+}
+
+function reset() {
+    clear();
+    gridSize = 30;
+    drawGrid();
+    marker();
+}
+
+function shake() {
+    $('.canvas').shake({
+        direction: "left",
+        times: 4,
+        speed: 65,
+		distance: 70
+    });
+    setTimeout(reset, 600);
 }
