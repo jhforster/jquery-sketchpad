@@ -1,0 +1,39 @@
+body {
+    font-family: 'Press Start 2P', cursive;
+}
+
+.logo {
+    text-align: center;
+    color: #212121;
+    font-size: 3rem;
+}
+
+.options {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+button {
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: .5rem;
+    text-decoration: none;
+    padding: 10px 10px;
+    background-color: #fff;
+    color: #212121;
+    border: 1px solid #212121;
+    border-radius: 5px;
+}
+
+.canvas {
+    width: 600px;
+    height: 600px;
+    margin: auto;
+    border-radius: 10px;
+    border: 50px solid #F17373;
+}
+
+.pixel {
+    background-color: #f0f0f0;
+    float: left;
+    display: inline-block;
+}
